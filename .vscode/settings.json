@@ -1,5 +1,7 @@
 {
     "files.associations": {
-        "stdio.h": "c"
+        "stdio.h": "c",
+        "corecrt.h": "c",
+        "vcruntime.h": "c"
     }
 }
