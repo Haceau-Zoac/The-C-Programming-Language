@@ -4,7 +4,7 @@ int main(void)
 {
   int nchar[52] = { 0 }, c;
 
-  while ((c = getchar()) != '\t')
+  while ((c = getchar()) != EOF)
   {
     if (c >= 'a' && c <= 'z')
       ++nchar[c - 'a'];
