@@ -2,6 +2,7 @@
 
 int main(void)
 {
+  int lim = 0;
   int i = 0;
   int c = 0;
 
