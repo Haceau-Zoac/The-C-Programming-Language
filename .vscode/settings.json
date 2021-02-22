@@ -2,6 +2,7 @@
     "files.associations": {
         "stdio.h": "c",
         "corecrt.h": "c",
-        "vcruntime.h": "c"
+        "vcruntime.h": "c",
+        "xlocale": "c"
     }
 }
