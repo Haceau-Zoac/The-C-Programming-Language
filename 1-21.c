@@ -3,8 +3,7 @@
 #define MAXLINE 1024
 #define N 4
 
-void replace_spaces_to_tab(char s[], int n);
-void replace_spaces(char s[], int n);
+void entab(char s[], int n);
 int getline(char s[], int lim);
 
 int main(void)
@@ -13,31 +12,26 @@ int main(void)
 
   while (getline(s, MAXLINE) != 0)
   {
-    replace_spaces(s, N);
+    entab(s, N);
     printf("%s", s);
   }
 
   return 0;
 }
 
-void replace_spaces_to_tab(char s[], int n)
+void entab(char s[], int n)
 {
-  s[0] = '\t';
-  for (int i = 1; s[n + i - 1] != '\0'; ++i)
-    s[i] = s[n + i - 1];
-}
-
-void replace_spaces(char s[], int n)
-{
-  for (int i = 0; s[i] != '\0'; ++i)
-    if (s[i] == ' ')
+  for (int i = 0, sn = 0; s[i] != '\0'; ++i)
+  {
+    if (s[i] == ' ') ++sn;
+    else sn = 0;
+    if (sn == n)
     {
-      int count;
-      for (count = 0; s[i] == ' ' && ++count; ++i)
-        if (count % n == 0)
-          replace_spaces_to_tab(s + i - n + 1, n);
-      i = i - count + 1;
+      s[i - n + 1] = '\t';
+      for (int j = i - n + 2; s[j + n - 1] != '\0'; ++j)
+        s[j] = s[j + n - 1];
     }
+  }
 }
 
 int getline(char s[], int lim)
