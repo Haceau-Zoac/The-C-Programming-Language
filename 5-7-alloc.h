@@ -1,5 +1,5 @@
-#ifndef _5_7_ALLOC_C
-#define _5_7_ALLOC_C
+#ifndef _5_7_ALLOC_H
+#define _5_7_ALLOC_H
 
 #define ALLOCSIZE 10000
 
@@ -17,4 +17,4 @@ char* alloc(int n)
     return 0;
 }
 
-#endif // _5_7_ALLOC_C
+#endif // _5_7_ALLOC_H
