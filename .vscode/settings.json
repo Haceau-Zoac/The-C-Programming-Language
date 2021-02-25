@@ -3,6 +3,7 @@
         "stdio.h": "c",
         "corecrt.h": "c",
         "vcruntime.h": "c",
-        "xlocale": "c"
+        "xlocale": "c",
+        "cstdlib": "c"
     }
 }
